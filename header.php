@@ -8,7 +8,6 @@ if(isset($pagetitle)){
 echo "<title>$sitename</title>";
 }
 ?>
-<style><?php include 'styles.css'; ?></style>
 <header>
 	<div class="overlay">
 <h1>Simply The Best</h1>

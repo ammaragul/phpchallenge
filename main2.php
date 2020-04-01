@@ -1,7 +1,7 @@
 
 <?php
 $pagetitle = 'form';
-include "header.php";
+require "header.php";
 ?>
 <?php
 // define variables and set to empty values
@@ -17,7 +17,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $nameErr = "Only letters and white space allowed";
     }
   }
-
   if (empty($_POST["email"])) {
     $emailErr = "Email is required";
   } else {
@@ -27,7 +26,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $emailErr = "Invalid email format";
     }
   }
-
   if (empty($_POST["address"])) {
     $addrErr = "Address is Required";
   } else {
@@ -37,21 +35,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $addrErr = "Only letters and numbers are allowed";
     }
   }
-
-  if (empty($_POST["comment"])) {
+ if (empty($_POST["comment"])) {
     $commentErr = "Comment is Required";
   } else {
     $comment = test_input($_POST["comment"]);
   }
-
   if (empty($_POST["gender"])) {
     $genderErr = "Gender is required";
   } else {
     $gender = test_input($_POST["gender"]);
-  }
-		
+  }		
 }
-
 function test_input($data) {
   $data = trim($data);
   $data = stripslashes($data);
@@ -65,6 +59,7 @@ function test_input($data) {
 <head>
 <meta charset="utf-8">
 <link rel="stylesheet" href="styles.css">
+<title><?php echo $pagetitle?></title>
 </head>
 <body>
 <div id = "wrapper">
@@ -116,7 +111,7 @@ if(isset($_POST['submit'])){
     } 
 	if(strlen($comment)<10) 
     { 
-        die('Comment is too short or empty!'); 
+        die('Comments are too short or empty!'); 
     } 
 	if(strlen($address)<5) 
     { 
@@ -133,7 +128,7 @@ if(isset($_POST['submit'])){
 	 header('location:submit.php');
     // You can also use header('Location: thank_you.php'); to redirect to another page.
 }?>
-<?php include "footer.php"?>
+<?php require "footer.php"?>
 </body>
 </html>
 
