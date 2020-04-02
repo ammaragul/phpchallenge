@@ -1,3 +1,6 @@
+<!doctype html>
+<html lang="en">
+<head>
 <?php
 $sitename = 'challenge.php';
 $pagetitle;
@@ -8,6 +11,8 @@ if(isset($pagetitle)){
 echo "<title>$sitename</title>";
 }
 ?>
+<style><?php include 'styles.css'; ?></style>
+</head>
 <header>
 	<div class="overlay">
 <h1>Simply The Best</h1>
@@ -26,4 +31,6 @@ echo "<title>$sitename</title>";
 	<p>Lorem ipsum dolor sit amet, audiam principes repudiandae eu pro, impetus expetendis voluptatum ea mei. No mea 
 pertinax adipiscing, veri latine ad mei, ex nam doctus option fabulas. Iusto intellegam definitionem ea cum. Te tale tempor mentitum eam, mazim utinam omnesque sea ea, hinc probatus reprehendunt eos ne.Et pri laoreet urbanitas, est at harum option minimum. </p>
 </div>
+
+
 

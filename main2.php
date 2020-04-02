@@ -1,4 +1,3 @@
-
 <?php
 $pagetitle = 'form';
 require "header.php";
@@ -53,15 +52,6 @@ function test_input($data) {
   return $data;
 }
 ?>
-<!--------------Form---------------->
-<!doctype html>
-<html lang ="en">
-<head>
-<meta charset="utf-8">
-<link rel="stylesheet" href="styles.css">
-<title><?php echo $pagetitle?></title>
-</head>
-<body>
 <div id = "wrapper">
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 Name: <input type="text" name="name"
@@ -81,10 +71,8 @@ value="<?php echo htmlspecialchars($comment);?>">
 <span class="error">* <?php echo $commentErr;?></span>
 <br><br>
 Gender:
-<input type="radio" name="gender" value="female">Female
-<input type="radio" name="gender" value="male">Male
-<input type="radio" name="gender" value="other" Other
-value="<?php echo htmlspecialchars($gender);?>">
+<input type="radio" name="gender">Female
+<input type="radio" name="gender"> Male
 <span class="error">* <?php echo $genderErr;?></span>
 <br><br>
 <input type="submit" name="submit" value="SUBMIT"> 
@@ -129,6 +117,3 @@ if(isset($_POST['submit'])){
     // You can also use header('Location: thank_you.php'); to redirect to another page.
 }?>
 <?php require "footer.php"?>
-</body>
-</html>
-
