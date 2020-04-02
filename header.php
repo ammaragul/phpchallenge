@@ -11,8 +11,9 @@ if(isset($pagetitle)){
 echo "<title>$sitename</title>";
 }
 ?>
-<style><?php include 'styles.css'; ?></style>
+<link rel="stylesheet" href="styles.css">
 </head>
+<body>
 <header>
 	<div class="overlay">
 <h1>Simply The Best</h1>
